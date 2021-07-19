@@ -4,7 +4,6 @@ openapi-generator-cli generate -g asciidoc -i  .\example.yaml
 site:
   title: FRIDA-Pension
   url: https://docs.freeinsurancedata.de
-  start_page: ./modules/ROOT/pages/index.adoc
 content:
   sources:
     - url: https://gitlab.com/antora/demo/demo-component-a.git
