@@ -1,4 +1,5 @@
 name: PensionService
 title: PensionService
 version: dev
-nav: modules/ROOT/nav.adoc
+nav: 
+ - modules/ROOT/nav.adoc
