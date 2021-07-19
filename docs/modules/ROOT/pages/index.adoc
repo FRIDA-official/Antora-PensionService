@@ -1,6 +1,0 @@
-= FRIDA Free Insurance Data
-:description: A description of the page stored in an HTML meta tag.
-:sectanchors:
-:url-repo: https://my-git-repo.com
-:page-tags: name of a tag, name of a tag
-:name: FRIDA
