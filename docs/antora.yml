@@ -1,6 +1,7 @@
 site:
   title: FRIDA-Pension
   url: https://docs.freeinsurancedata.de
+  name: hass
 content:
   sources:
     - url: https://gitlab.com/antora/demo/demo-component-a.git
