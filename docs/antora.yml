@@ -1,6 +1,3 @@
-# Antora-PensionService
-
-openapi-generator-cli generate -g asciidoc -i  .\example.yaml
 site:
   title: FRIDA-Pension
   url: https://docs.freeinsurancedata.de
