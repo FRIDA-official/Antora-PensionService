@@ -1,5 +1,5 @@
 name: component-pension
-title: PensionService
+title: Pension Service
 version: '1.0'
 nav:
 - modules/ROOT/nav.adoc
