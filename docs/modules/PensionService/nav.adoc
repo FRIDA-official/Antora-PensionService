@@ -1,1 +1,1 @@
-* xref:example.adoc[Module One]
+* xref:example.adoc[PensionService]
