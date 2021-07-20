@@ -1,5 +1,5 @@
-name: component-b
-title: Component B
+name: PensionService
+title: PensionService
 version: dev
 nav:
 - modules/ROOT/nav.adoc
