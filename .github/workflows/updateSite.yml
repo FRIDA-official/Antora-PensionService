@@ -14,7 +14,7 @@ jobs:
           sleep 10s
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
-          owner: keithweaver
+          owner: FRIDA-offical
           repo: Antora-FRIDA-Playbook
           github_token: ${{ secrets.G_ACCESS_TOKEN }}
           workflow_file_name: deploy.yml
