@@ -11,8 +11,8 @@ jobs:
       - name: Build Web App
         run: |
           echo "Build Web App"
-      - name: Trigger shit
-        uses: peter-evans/repository-dispatch@v1
+      - name: Workflow Dispatch
+        uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: deploy.yml
           repo: FRIDA-offical/Antora-FRIDA-Playbook
