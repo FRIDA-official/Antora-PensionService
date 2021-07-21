@@ -15,7 +15,7 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: deploy
-          repo: FRIDA-offical/Antora-FRIDA-Playbook
+          repo: FRIDA-official/Antora-FRIDA-Playbook
           token: ${{ secrets.G_ACCESS_TOKEN }}
           inputs: '{ "message": "blah blah", "debug": true }'
       - name: Deploy Web App
