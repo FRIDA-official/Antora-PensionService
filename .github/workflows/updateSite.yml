@@ -17,7 +17,6 @@ jobs:
           workflow: deploy documentation
           repo: FRIDA-official/Antora-FRIDA-Playbook
           token: ${{ secrets.G_ACCESS_TOKEN }}
-          inputs: '{ "message": "blah blah"}'
       - name: Deploy Web App
         run: |
           echo "Deploy Web App"
