@@ -11,13 +11,13 @@ jobs:
       - name: Build Web App
         run: |
           echo "Build Web App"
-          
-      - uses: peter-evans/repository-dispatch@v1
+      - name: Trigger shit
+        uses: peter-evans/repository-dispatch@v1
         with:
-          repository: FRIDA-offical/Antora-FRIDA-Playbook
-          github_token: ${{ secrets.G_ACCESS_TOKEN }}
-          event-type: my-event
-          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+          workflow: deploy.yml
+          repo: FRIDA-offical/Antora-FRIDA-Playbook
+          token: ${{ secrets.G_ACCESS_TOKEN }}
+          inputs: '{ "message": "blah blah", "debug": true }'
       - name: Deploy Web App
         run: |
           echo "Deploy Web App"
