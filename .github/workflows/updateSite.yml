@@ -18,8 +18,6 @@ jobs:
           if: hashFiles('*.yaml') != ''
           run: |        
               for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o ./docs/modules/PensionService/pages/ ; done 
-        - name: git status
-          run: git init
         - name: Add files 
           run: | 
             git add ./docs/modules/PensionService/pages/index.adoc
