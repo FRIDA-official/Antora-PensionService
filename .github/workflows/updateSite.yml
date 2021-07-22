@@ -4,7 +4,7 @@ jobs:
     Generate_asciidoc_and_start_Workflow_of_Antora-FRIDA-Playbook:
       runs-on: ubuntu-latest
       container: 
-          image: nathanfriend/java-node-git
+          image: nathanfriend/java-node-git:8-slim
       steps:
         - uses: actions/checkout@master
           with: 
@@ -13,16 +13,13 @@ jobs:
             ref: ${{ github.ref }}   
         - name: install npm packages
           run: |
-              npm install @openapitools/openapi-generator-cli -g
-              npm install --save npm-git-install
-              npm install       
+              npm install @openapitools/openapi-generator-cli -g       
         - name: validate yaml and generate asciidoc out of yaml spec
           if: hashFiles('*.yaml') != ''
           run: |        
               for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o ./docs/modules/PensionService/pages/ ; done 
         - name: Add files 
           run: 
-            ls
             git add ./docs/modules/PensionService/pages/index.adoc
         - name: Commit files
           run: | 
