@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: FRIDA PensionSerivce
-  description: base spec without dependencies
+  description: base specs without dependencies
   termsOfService: 'https://github.com/FRIDA-official'
   contact:
     email: anton.rott@accenture.com
