@@ -21,12 +21,7 @@ jobs:
              npm install @openapitools/openapi-generator-cli -g       
       - name: validate yaml and generate asciidoc out of yaml spec
         run: |
-            JAVA_HOME=/__t/Java_Adopt_jdk/11.0.11-9/x64
-            PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
-            export JAVA_HOME
-            export JRE_HOME
-            export PATH
-            java -version
+            java -cp java HelloWorldApp
             for filename in ./*.yaml; do openapi-generator-cli validate -i $filename; done 
             for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o .docs/modules/PensionService/pages/; done 
       - name: Workflow Dispatch
