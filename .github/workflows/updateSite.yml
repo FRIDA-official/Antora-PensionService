@@ -18,8 +18,19 @@ jobs:
       - name: validate yaml and generate asciidoc out of yaml spec
         if: hashFiles('*.yaml') != ''
         run: |        
-            for filename in ./*.yaml; do openapi-generator-cli validate -i $filename; done 
             for filename in ./*.yaml; do openapi-generator-cli generate --stacktrace -g asciidoc \ -i $filename \ -o ./docs/modules/PensionService/pages/ ; done 
+      - name: Add files and commit files
+        run: | 
+          git add ./docs/modules/PensionService/pages/index.adoc
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add changes" --allow-empty
+      - name: Pushing changes to gh-pages
+        uses: ad-m/github-push-action@master          
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: true    
       - name: Workflow Dispatch
         uses: benc-uk/workflow-dispatch@v1
         with:
