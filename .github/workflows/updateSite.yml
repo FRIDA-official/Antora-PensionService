@@ -12,10 +12,12 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
           ref: ${{ github.ref }}
-      - uses: actions/setup-java@v2
+      - name: Setup Java
+        uses: actions/setup-java@v2
         with:
-          distribution: 'adopt' # See 'Supported distributions' for available options
-          java-version: '11'
+          distribution: 'adopt'
+          java-package: jdk
+          java-version: ${{ matrix.java }}
       - name: install npm packages
         run: |
              npm install @openapitools/openapi-generator-cli -g       
