@@ -19,7 +19,8 @@ jobs:
           java-package: jdk
           java-version: '11'
       - name: sad
-        run: printenv
+        run: |
+             alternatives --auto javac
       - name: install npm packages
         run: |
              npm install @openapitools/openapi-generator-cli -g       
