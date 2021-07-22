@@ -20,7 +20,7 @@ jobs:
               for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o ./docs/modules/PensionService/pages/ ; done 
         - name: Add files 
           run: 
-            .git/ 
+            git status
             git add ./docs/modules/PensionService/pages/index.adoc
         - name: Commit files
           run: | 
