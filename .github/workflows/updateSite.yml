@@ -19,7 +19,7 @@ jobs:
         if: hashFiles('*.yaml') != ''
         run: |        
             for filename in ./*.yaml; do openapi-generator-cli validate -i $filename; done 
-            for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o ./docs/modules/PensionService/pages/$filename; done 
+            for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc \ -i $filename \ -o ./docs/modules/PensionService/pages/ \; done 
       - name: Workflow Dispatch
         uses: benc-uk/workflow-dispatch@v1
         with:
