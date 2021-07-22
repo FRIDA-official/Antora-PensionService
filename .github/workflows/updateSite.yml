@@ -14,7 +14,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: install npm packages
         run: |
-             apt install default-jdk
+             sudo apt install default-jdk
              npm install @openapitools/openapi-generator-cli -g       
       - name: validate yaml and generate asciidoc out of yaml spec
         run: |
