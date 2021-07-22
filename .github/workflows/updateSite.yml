@@ -21,7 +21,7 @@ jobs:
              npm install @openapitools/openapi-generator-cli -g       
       - name: validate yaml and generate asciidoc out of yaml spec
         run: |
-        
+            java -version
             for filename in ./*.yaml; do openapi-generator-cli validate -i $filename; done 
             for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o .docs/modules/PensionService/pages/; done 
       - name: Workflow Dispatch
