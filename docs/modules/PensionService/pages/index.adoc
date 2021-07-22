@@ -14,7 +14,7 @@ anton.rott@accenture.com
 
 [abstract]
 .Abstract
-base spec without dependencies
+base specs without dependencies
 
 
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
