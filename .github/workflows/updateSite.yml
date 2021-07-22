@@ -1,44 +1,43 @@
 name: Deploy
 on: [push]
 jobs:
-  build:
-    name: Generate asciidoc and start Workflow of FRIDA-official/Antora-FRIDA-Playbook 
-    runs-on: ubuntu-latest
-    container: 
-            image: nathanfriend/java-node-git
-    steps:
-      - uses: actions/checkout@master
-        with: 
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-          ref: ${{ github.ref }}   
-      - name: install npm packages
-        run: |
-             npm install @openapitools/openapi-generator-cli -g       
-      - name: validate yaml and generate asciidoc out of yaml spec
-        if: hashFiles('*.yaml') != ''
-        run: |        
-            for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o ./docs/modules/PensionService/pages/ ; done 
-      - name: git status
-        run: git status
-      - name: Add files 
-        run: | 
-          git add ./docs/modules/PensionService/pages/index.adoc
-      - name: Commit files
-        run: | 
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Add changes" --allow-empty
-      - name: Pushing changes to gh-pages
-        uses: ad-m/github-push-action@master          
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-          force: true    
-      - name: Workflow Dispatch
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: deploy documentation
-          repo: FRIDA-official/Antora-FRIDA-Playbook
-          token: ${{ secrets.G_ACCESS_TOKEN }}
+    Generate_asciidoc_and_start_Workflow_of_Antora-FRIDA-Playbook:
+      runs-on: ubuntu-latest
+      container: 
+              image: nathanfriend/java-node-git
+      steps:
+        - uses: actions/checkout@master
+          with: 
+            persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+            fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+            ref: ${{ github.ref }}   
+        - name: install npm packages
+          run: |
+              npm install @openapitools/openapi-generator-cli -g       
+        - name: validate yaml and generate asciidoc out of yaml spec
+          if: hashFiles('*.yaml') != ''
+          run: |        
+              for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o ./docs/modules/PensionService/pages/ ; done 
+        - name: git status
+          run: git status
+        - name: Add files 
+          run: | 
+            git add ./docs/modules/PensionService/pages/index.adoc
+        - name: Commit files
+          run: | 
+            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git commit -m "Add changes" --allow-empty
+        - name: Pushing changes to gh-pages
+          uses: ad-m/github-push-action@master          
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: ${{ github.ref }}
+            force: true    
+        - name: Workflow Dispatch
+          uses: benc-uk/workflow-dispatch@v1
+          with:
+            workflow: deploy documentation
+            repo: FRIDA-official/Antora-FRIDA-Playbook
+            token: ${{ secrets.G_ACCESS_TOKEN }}
          
