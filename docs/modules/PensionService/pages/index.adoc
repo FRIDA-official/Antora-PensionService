@@ -1,0 +1,465 @@
+= FRIDA PensionSerivce
+anton.rott@accenture.com
+0.0.1
+:toc: left
+:numbered:
+:toclevels: 3
+:source-highlighter: highlightjs
+:keywords: openapi, rest, FRIDA PensionSerivce 
+:specDir: 
+:snippetDir: 
+:generator-template: v1 2019-12-20
+:info-url: https://openapi-generator.tech
+:app-name: FRIDA PensionSerivce
+
+[abstract]
+.Abstract
+base spec without dependencies
+
+
+// markup not found, no include::{specDir}intro.adoc[opts=optional]
+
+
+== Access
+
+* *OAuth*  AuthorizationUrl: _https://frida-demo.okta.com/oauth2/default/v1/authorize?nonce&#x3D;kdkdkl_, TokenUrl:   __ 
+
+* *OAuth*  AuthorizationUrl: _https://frida-demo.okta.com/oauth2/default/v1/authorize?nonce&#x3D;kdkdkl_, TokenUrl:   _https://frida-demo.okta.com/oauth2/default/v1/token?nonce&#x3D;kdkdkl_ 
+
+
+
+== Endpoints
+
+
+[.Kalkulierung]
+=== Kalkulierung
+
+
+[.berechneRente]
+==== berechneRente
+    
+`POST /RentenKalkulation`
+
+Nutzt oAuth2
+
+===== Description 
+
+
+
+
+// markup not found, no include::{specDir}RentenKalkulation/POST/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+====== Body Parameter
+
+[cols="2,3,1,1,1"]
+|===         
+|Name| Description| Required| Default| Pattern
+
+| RentenParameter 
+| Alle zur Rentenkalkulation benötigten Attribute <<RentenParameter>> 
+| X 
+|  
+|  
+
+|===         
+
+
+
+
+
+===== Return Type
+
+<<RentenSummeResponse>>
+
+
+===== Content Type
+
+* application/json
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===         
+| Code | Message | Datatype 
+
+
+| 200
+| Erfolgreiche Berechnung
+|  <<RentenSummeResponse>>
+
+
+| 403
+| Authorisierungsfehler
+|  <<ErrorList>>
+
+
+| 500
+| Generischer Fehler
+|  <<ErrorList>>
+
+|===         
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}RentenKalkulation/POST/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}RentenKalkulation/POST/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :RentenKalkulation/POST/POST.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}RentenKalkulation/POST/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[#models]
+== Models
+
+
+[#Amount]
+=== _Amount_ 
+
+
+
+[.fields-Amount]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| sum 
+|  
+| Double  
+| 
+| double 
+
+| currency 
+|  
+| String  
+| 
+| string 
+
+|===
+
+
+[#ErrorList]
+=== _ErrorList_ 
+
+
+
+[.fields-ErrorList]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| errors 
+| X 
+| List  of <<ErrorList_errors>> 
+| 
+|  
+
+|===
+
+
+[#ErrorListErrors]
+=== _ErrorListErrors_ 
+
+
+
+[.fields-ErrorListErrors]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| code 
+| X 
+| String  
+| The code of the error
+|  
+
+| title 
+| X 
+| String  
+| A displayable title of the error type
+|  
+
+| detail 
+| X 
+| String  
+| Detail of the error
+|  
+
+| meta 
+|  
+| Object  
+| Optional additional data for specific error types
+|  
+
+|===
+
+
+[#RentenParameter]
+=== _RentenParameter_ 
+
+
+
+[.fields-RentenParameter]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| ArtderVersicherung 
+|  
+| String  
+| 
+|  
+
+| DatumderStandmitteilung 
+|  
+| date  
+| Date in YYYY-DD-MM Format
+| date 
+
+| Versicherungsbeginn 
+|  
+| date  
+| Date in YYYY-DD-MM Format
+| date 
+
+| DatumRentenbeginn 
+|  
+| date  
+| Date in YYYY-DD-MM Format
+| date 
+
+| aktuelleBeitragszahlungen 
+|  
+| Double  
+| 
+| double 
+
+| AktuellesVorsorgevermögen 
+|  
+| Double  
+| 
+| double 
+
+| Garantiezins 
+|  
+| Double  
+| 
+| double 
+
+| ausgewiesenederzeitigenÜberschussbeteiligung 
+|  
+| Double  
+| 
+| double 
+
+| derzeitigeGesamtverzinsung 
+|  
+| Double  
+| 
+| double 
+
+| HöhedergarantiertenAltersrente 
+|  
+| Double  
+| 
+| double 
+
+| HöhederAltersrentebeiderzeitigenÜberschussbeteiligungen 
+|  
+| Double  
+| 
+| double 
+
+| HöhedergarantiertenAltersrentebeiFortzahlungderderzeitigenBeiträge 
+|  
+| Double  
+| 
+| double 
+
+| HöhederAltersrentebeiderzeitigenÜberschussbeteiligungenbeiFortzahlungderderzeitigenBeiträge 
+|  
+| Double  
+| 
+| double 
+
+| FondskapitalbeiFondswachstumvonXProzentbeiRentenbeginn 
+|  
+| Double  
+| 
+| double 
+
+| FondskapitalbeiFondswachstumvonXProzentbeiRentenbeginnbeiFortzahlungderderzeitigenBeiträge 
+|  
+| Double  
+| 
+| double 
+
+| HochrechnungdesgarantiertenAltersvorsorgevermögens 
+|  
+| Double  
+| 
+| double 
+
+| HochrechnungdesAltersvorsorgevermögens 
+|  
+| Double  
+| 
+| double 
+
+| Rentenfaktor 
+|  
+| Double  
+| 
+| double 
+
+| AktuellerRentenfaktorjeZehnTausendEuroVorsorgeguthaben 
+|  
+| Double  
+| 
+| double 
+
+| GarantierterRentenfaktorjeZehnTausendEuroVorsorgeguthaben 
+|  
+| Double  
+| 
+| double 
+
+| aktuellejährlichgezahlteZulagen 
+|  
+| Double  
+| 
+| double 
+
+| zulagen 
+|  
+| RentenParameter_zulagen  
+| 
+|  
+
+| kinder 
+|  
+| RentenParameter_kinder  
+| 
+|  
+
+|===
+
+
+[#RentenParameterKinder]
+=== _RentenParameterKinder_ 
+
+
+
+[.fields-RentenParameterKinder]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| anzahlderKinder 
+|  
+| Integer  
+| 
+|  
+
+| geburtsDatumDerKinder 
+|  
+| List  of <<date>> 
+| 
+| date 
+
+|===
+
+
+[#RentenParameterZulagen]
+=== _RentenParameterZulagen_ 
+
+
+
+[.fields-RentenParameterZulagen]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| grundzulagen 
+|  
+| Boolean  
+| 
+|  
+
+| Kinderzulagen 
+|  
+| RentenParameter_zulagen_Kinderzulagen  
+| 
+|  
+
+|===
+
+
+[#RentenParameterZulagenKinderzulagen]
+=== _RentenParameterZulagenKinderzulagen_ 
+
+
+
+[.fields-RentenParameterZulagenKinderzulagen]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| anzahlderKinderdieberücksichtigtwerden 
+|  
+| Integer  
+| 
+|  
+
+|===
+
+
+[#RentenSummeResponse]
+=== _RentenSummeResponse_ 
+
+
+
+[.fields-RentenSummeResponse]
+[cols="2,1,2,4,1"]
+|===         
+| Field Name| Required| Type| Description| Format
+
+| responseUUID 
+|  
+| String  
+| 
+| string 
+
+| timestamp 
+|  
+| Date  
+| 
+| date-time 
+
+| summe 
+| X 
+| Amount  
+| 
+|  
+
+|===
+
+
