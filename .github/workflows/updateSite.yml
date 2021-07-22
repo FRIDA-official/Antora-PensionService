@@ -13,9 +13,11 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
           ref: ${{ github.ref }}
       - name: Setup Java
-        uses: actions/setup-java@v1
+        uses: tradeshift/actions-setup-java@master
         with:
-          java-version: 1.8
+          # standard github actions parameters
+          # possible values explained in sections below 
+          java-version: 11
       - name: install npm packages
         run: |
              npm install @openapitools/openapi-generator-cli -g       
