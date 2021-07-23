@@ -1,6 +1,6 @@
 = FRIDA PensionSerivce
 anton.rott@accenture.com
-0.0.1
+0.0.2
 :toc: left
 :numbered:
 :toclevels: 3
