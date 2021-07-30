@@ -10,7 +10,7 @@ abgerufenen Liste kann eine Berechnung durchgeführt werden. Für all
 diese Schritte wird ein Token benötigt, das der Benutzer zuvor bei den
 Identitätsprovidern der Versicherungsgesellschaften anfordern muss.
 
-image::User_de[Image not found]
+image::component-pension:User_de.png[Image not found]
 
 Dieses UML-Diagramm beschreibt die Beziehung zwischen dem Kunden und den
 beiden Plattformen. Er interagiert mit dem DRI-Portal, um seine Rente zu
@@ -20,7 +20,7 @@ Kundenplattform die sichtbaren Verträge konfigurieren.
 
 === Authentifizierung
 
-image::Auth_de[Image not found]
+image::component-pension:Auth_de.png[Image not found]
 
 Die Authentifizierung erfolgt ebenfalls über den Identity Provider des
 Versicherers. Das DRI leitet auf das entsprechende Login-Portal weiter.
@@ -72,7 +72,7 @@ dieser Richtlinien ist nicht Teil der Spezifikation von FRIDA.
 
 == Rentenberechnung
 
-  image::Case1_de[Image not found]
+  image::component-pension:Case1_de.png[Image not found]
 
 Vor dem Start einer Berechnung muss der Anwender entscheiden, welche
 Verträge er der BBS im Kundenportal zugänglich machen möchte. Dazu kann
