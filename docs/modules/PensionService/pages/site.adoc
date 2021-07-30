@@ -88,17 +88,11 @@ enthält den ausgewählten Die Anfrage enthält den ausgewählten Vertrag
 und ein Token, bei Erfolg erhält die DRI die Stammdaten und berechnet
 daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird. an den
 Kunden zurückgegeben wird.
+include::path[leveloffset=offset,lines=ranges,tag(s)=name(s),indent=depth,opts=optional]
 
 include::index.adoc[]
 
-
-,===
-include::page$TestSeite.html[]
-,===
-++++
 include::TestSeite.html[]
-++++
-link:TestSeite.html[]
 
 
 
