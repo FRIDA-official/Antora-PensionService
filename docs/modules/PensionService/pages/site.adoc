@@ -10,7 +10,7 @@ abgerufenen Liste kann eine Berechnung durchgeführt werden. Für all
 diese Schritte wird ein Token benötigt, das der Benutzer zuvor bei den
 Identitätsprovidern der Versicherungsgesellschaften anfordern muss.
 
-image::component-pension:User_de.png[Image not found]
+image::component-pension::User_de.png[Image not found]
 
 Dieses UML-Diagramm beschreibt die Beziehung zwischen dem Kunden und den
 beiden Plattformen. Er interagiert mit dem DRI-Portal, um seine Rente zu
@@ -20,7 +20,7 @@ Kundenplattform die sichtbaren Verträge konfigurieren.
 
 === Authentifizierung
 
-image::component-pension:Auth_de.png[Image not found]
+image::component-pension::Auth_de.png[Image not found]
 
 Die Authentifizierung erfolgt ebenfalls über den Identity Provider des
 Versicherers. Das DRI leitet auf das entsprechende Login-Portal weiter.
@@ -40,10 +40,10 @@ manipuliert werden. Um die Vertraulichkeit und die Integrität der
 Informationen sicherzustellen, müssen entsprechende Maßnahmen zur
 Absicherung der Übertragung ergriffen werden. FRIDA nutzt hierbei die
 Empfehlungen und den Mindeststandard gemäß dem Bundesamt für
-Informationssicherheit (BSI), wie hier definiert:
-https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/CloudComputing/SecurityRecommendationsCloudComputingProviders.pdf
-und
-https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Mindeststandards/TLS-Protokoll/TLS-Protokoll_node.html
+Informationssicherheit (BSI), wie hier definiert: +
+https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/CloudComputing/SecurityRecommendationsCloudComputingProviders.pdf +
+und +
+https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Mindeststandards/TLS-Protokoll/TLS-Protokoll_node.html +
 
 Entsprechend gelten folgende Mindeststandards für die Kommunikation: 
 * TLS > 1.2 in Kombination mit Perfect Forward Secrecy (PFS) 
@@ -72,7 +72,7 @@ dieser Richtlinien ist nicht Teil der Spezifikation von FRIDA.
 
 == Rentenberechnung
 
-  image::component-pension:Case1_de.png[Image not found]
+image::component-pension::Case1_de.png[Image not found]
 
 Vor dem Start einer Berechnung muss der Anwender entscheiden, welche
 Verträge er der BBS im Kundenportal zugänglich machen möchte. Dazu kann
