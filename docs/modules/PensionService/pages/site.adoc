@@ -89,5 +89,5 @@ und ein Token, bei Erfolg erhält die DRI die Stammdaten und berechnet
 daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird. an den
 Kunden zurückgegeben wird.
 
-include::PensionService:index.adoc[implement of an API]
+include::index.adoc[implement of an API]
 
