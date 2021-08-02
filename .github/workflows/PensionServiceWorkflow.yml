@@ -6,7 +6,7 @@ jobs:
     Generate_asciidoc_and_start_Workflow_of_Antora-FRIDA-Playbook:
       runs-on: ubuntu-latest
       container: 
-          image: nathanfriend/java-node-git:8-slim
+          image: jonasknebel/resolver_for_yaml_dependencies:latest 
       steps:
         # Checkout the Antora-PensionService repository on the docker image
         - uses: actions/checkout@master
@@ -14,15 +14,9 @@ jobs:
             persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
             fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
             ref: ${{ github.ref }} 
-        # Install openapi-cli 
-        - name: install npm packages
-          run: |
-              npm install @openapitools/openapi-generator-cli -g     
         # Generate asciidoc files out of the yaml files              
-        - name: validate yaml and generate asciidoc out of yaml spec
-          if: hashFiles('*.yaml') != ''
-          run: |        
-              for filename in ./*.yaml; do openapi-generator-cli generate -g asciidoc -i $filename -o ./docs/modules/PensionService/pages/ ; done 
+        - name: validate yaml and generate redoc out of yaml spec
+          run: for filename in ./*.yaml; do redoc-cli bundle -o ./docs/modules/partials/${filename:2:$((${#filename})) - 7}.html $filename; done  
         # Add the generated yaml file
         - name: Add files 
           run: 
