@@ -20,8 +20,8 @@ Kundenplattform die sichtbaren Verträge konfigurieren.
 
 === Authentifizierung
 
-image::Auth_de.png[Image not found]
-
+image::Auth_de.png[Image not found,730]
+ 
 Die Authentifizierung erfolgt ebenfalls über den Identity Provider des
 Versicherers. Das DRI leitet auf das entsprechende Login-Portal weiter.
 Nach einem erfolgreichen Login wird der Kunde wird der Kunde zum DRI
