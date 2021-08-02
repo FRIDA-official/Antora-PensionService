@@ -16,7 +16,7 @@ jobs:
             ref: ${{ github.ref }} 
         # Generate asciidoc files out of the yaml files              
         - name: validate yaml and generate redoc out of yaml spec
-          run: for filename in ./*.yaml; do redoc-cli bundle -o ./docs/modules/partials/${filename:2:$((${#filename})) - 7}.html $filename; done  
+          run: for filename in ./*.yaml; do redoc-cli bundle -o ./docs/modules/partials/PensionService/partials/${filename:2:$((${#filename})) - 7}.html $filename; done  
         # Add the generated yaml file
         - name: Add files 
           run: 
