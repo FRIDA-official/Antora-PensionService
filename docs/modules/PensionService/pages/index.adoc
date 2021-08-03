@@ -1,5 +1,5 @@
-  
-  
+[%hardbreaks]
+[%hardbreaks]
   
 = FRIDA Pension
 
