@@ -1,6 +1,6 @@
-+
- 
- 
+  
+  
+  
 = FRIDA Pension
 
 == Übersicht
