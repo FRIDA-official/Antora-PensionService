@@ -1,1 +1,1 @@
-* xref:index.adoc[Pension Service]
+* xref:de/PensionService.adoc[Pension Service]
