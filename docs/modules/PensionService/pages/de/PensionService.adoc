@@ -6,7 +6,7 @@
 
 Der Frida PensionService ermöglicht es dem Kunden, eine Berechnung
 seiner Rente für einen bestimmten Vertrag durchzuführen. Dazu muss der
-Benutzer seine sichtbaren Verträge konfigurieren, auf die auf die die
+Benutzer seine sichtbaren Verträge konfigurieren, auf die auf auch die
 DRI-Plattform zugreift, um anschließend die Berechnung anhand der
 Vertragsdaten durchzuführen. Nach dieser Konfiguration sind die Verträge
 im Rentencockpit sichtbar. Nach Auswahl eines bestimmten Vertrag aus der
@@ -93,12 +93,11 @@ Stammdaten des ausgewählten Vertrages aus dem Kundenportal mit der
 Methode ``requestMasterData(selectedContract, token)`` die Anfrage
 enthält den ausgewählten Die Anfrage enthält den ausgewählten Vertrag
 und ein Token, bei Erfolg erhält die DRI die Stammdaten und berechnet
-daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird. an den
-Kunden zurückgegeben wird. +
+daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird.  +
  +
 
 ++++
-include::partial$FRIDA_PensionInformation_OA3_full_en.html[]
+include::partial$FRIDA_PensionInformation_OA3_full_en.html[style="max-width:100rem"]
 ++++
 
 
