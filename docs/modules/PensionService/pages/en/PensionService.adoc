@@ -67,8 +67,9 @@ contract and a token, if this process succeeds the DRI recieves the master data 
 gets returned to the customer. +
  +
 
-++++
+[.yamlspec]  
+--
 include::partial$FRIDA_PensionInformation_OA3_full_en.html[]
-++++
+--
 
 
