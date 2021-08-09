@@ -1,5 +1,4 @@
 [.specdescription]
---
 = FRIDA Pension
 
 == Overview
@@ -66,7 +65,7 @@ selected contract from the customer portal with the method ``requestMasterData(s
 contract and a token, if this process succeeds the DRI recieves the master data and uses that data to calculate the pension amout, which then
 gets returned to the customer. +
  +
---
+
 
 [.yamlspec]  
 ****
