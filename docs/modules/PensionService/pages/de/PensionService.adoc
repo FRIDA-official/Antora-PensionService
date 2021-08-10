@@ -91,7 +91,8 @@ Stammdaten des ausgewählten Vertrages aus dem Kundenportal mit der
 Methode ``requestMasterData(selectedContract, token)`` die Anfrage
 enthält den ausgewählten Die Anfrage enthält den ausgewählten Vertrag
 und ein Token, bei Erfolg erhält die DRI die Stammdaten und berechnet
-daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird.  
+daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird.  +
++
 
 
 [.yamlspec]
