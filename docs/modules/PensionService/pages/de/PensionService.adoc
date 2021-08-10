@@ -1,5 +1,3 @@
-[.specdescription]
---
 = FRIDA Pension
 
 == Übersicht
@@ -94,13 +92,13 @@ Methode ``requestMasterData(selectedContract, token)`` die Anfrage
 enthält den ausgewählten Die Anfrage enthält den ausgewählten Vertrag
 und ein Token, bei Erfolg erhält die DRI die Stammdaten und berechnet
 daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird.  
+
+
+[.yamlspec]
 --
-
-
-
 ++++
 include::partial$FRIDA_PensionInformation_OA3_full_en.html[]
 ++++
-
+--
 
 
