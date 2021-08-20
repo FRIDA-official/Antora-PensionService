@@ -4,12 +4,12 @@
 
 Der Frida PensionService ermöglicht es dem Kunden, eine Berechnung
 seiner Rente für einen bestimmten Vertrag durchzuführen. Dazu muss der
-Benutzer seine sichtbaren Verträge konfigurieren, auf die auf auch die
+Benutzer seine sichtbaren Verträge konfigurieren, auf die auch die
 DRI-Plattform zugreift, um anschließend die Berechnung anhand der
 Vertragsdaten durchzuführen. Nach dieser Konfiguration sind die Verträge
 im Rentencockpit sichtbar. Nach Auswahl eines bestimmten Vertrag aus der
 abgerufenen Liste kann eine Berechnung durchgeführt werden. Für all
-diese Schritte wird ein Token benötigt, das der Benutzer zuvor bei den
+diese Schritte wird ein Token benötigt, welches der Benutzer zuvor bei den
 Identitätsprovidern der Versicherungsgesellschaften anfordern muss.
 
 image::User_de.png[Image not found]
@@ -25,10 +25,10 @@ Kundenplattform die sichtbaren Verträge konfigurieren.
 image::Auth_de.png[Image not found,730]
  
 Die Authentifizierung erfolgt ebenfalls über den Identity Provider des
-Versicherers. Das DRI leitet auf das entsprechende Login-Portal weiter.
-Nach einem erfolgreichen Login wird der Kunde wird der Kunde zum DRI
+Versicherers. Das DRI Portal leitet auf das entsprechende Login-Portal weiter.
+Nach einem erfolgreichen Login wird der Kunde zum DRI Portal
 weitergeleitet und das Token wird für die spätere Verwendung
-gespeichert. Es wird empfohlen eine einfache Nutzererfahrung zu achten.
+gespeichert. Es wird empfohlen auf eine einfache Nutzererfahrung zu achten.
 So sollte beispielsweise eine Registrierung möglich sein, sofern noch
 kein Benutzerkonto beim Versicherungsanbieter vorhanden ist.
 
@@ -75,7 +75,7 @@ sowohl eine sichere Speicherung der Daten, als auch die Nutzung von
 Verschlüsselung innerhalb des internen Netzwerks. Die Sicherstellung
 dieser Richtlinien ist nicht Teil der Spezifikation von FRIDA.
 
-== Rentenberechnung
+== Vertragsabfrage
 
 image::Case1_de.png[Image not found]
 
@@ -88,10 +88,9 @@ werden die sichtbaren Verträge an den Kunden zurückgegeben.
 Der Kunde hat auch die Möglichkeit, einen ausgewählten Vertrag zu
 berechnen, den er an die DRI senden kann. Die BBS fragt dann die
 Stammdaten des ausgewählten Vertrages aus dem Kundenportal mit der
-Methode ``requestMasterData(selectedContract, token)`` die Anfrage
-enthält den ausgewählten Die Anfrage enthält den ausgewählten Vertrag
-und ein Token, bei Erfolg erhält die DRI die Stammdaten und berechnet
-daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird.  +
+Methode ``requestMasterData(selectedContract, token)`` ab. Die Anfrage
+enthält den ausgewählten Vertrag und ein Token, bei Erfolg erhält die DRI 
+die Stammdaten und berechnet daraus die Rentenhöhe, die dann an den Kunden zurückgegeben wird.  +
 
 
 
