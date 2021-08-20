@@ -4,7 +4,7 @@
 
 The Frida PensionService allows customers to perform a calculation of his pension for a specific contract. For this, the user has to configure his visible contracts which can be
 accessed by the DRI platform to perform the calcution using the contract data afterwards. After this configuration the contracts are visible in the pension cockpit. Upon choosing a 
-specfic contract from the fetched list a calculation can be performed. All these steps require a token which has to be requested by the user beforehand from the identity providers of 
+specific contract from the fetched list a calculation can be performed. All these steps require a token which has to be requested by the user beforehand from the identity providers of 
 the insurance companies. 
 
 image::User_en.png[Image not found]
@@ -52,7 +52,7 @@ https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Z
 
 In order to be able to guarantee complete end-to-end encryption, measures to secure the data must also be ensured at the provider of the data (e.g. insurance) and the service. This includes both secure storage of the data, as well as the use of encryption within the internal network. Ensuring these guidelines is not part of the FRIDA specification. 
 
-== Pension Calculation
+== Request Contracts
 
 image::Case1_en.png[Image not found]
 
@@ -60,8 +60,8 @@ Before starting any calculation the user has to decide which contracts he wants 
 He can also access the pension cockpit of the DRI which then sends a request with a token to the customer portal. 
 If this process succeed the visible contracts get returned to the customer. </p> <br>
 <p>The customer also has the option to calculate a selected contract which he can send to the DRI. The DRI then asks for the master data of the 
-selected contract from the customer portal with the method ``requestMasterData(selectedContract, token)`` the request contains the selected
-contract and a token, if this process succeeds the DRI recieves the master data and uses that data to calculate the pension amout, which then
+selected contract from the customer portal with the method ``requestMasterData(selectedContract, token)``. The request contains the selected
+contract and a token, if this process succeeds the DRI recieves the master data and uses that data to calculate the pension amount, which then
 gets returned to the customer. +
 
 
