@@ -30,7 +30,8 @@ https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/CloudComputing/
 and +
 https://www.bsi.bund.de/EN/Themen/Oeffentliche-Verwaltung/Mindeststandards/TLS-Protokoll/TLS-Protokoll_node.html +
 
-Accordingly, the following minimum standards apply to communication:  
+Accordingly, the following minimum standards apply to communication: 
+
 * TLS > 1.2 in combination with Perfect Forward Secrecy (PFS). 
  * Older TLS or SSL versions must not be used
  * Use of HTTP Strict Transport Security (HSTS) is recommended
