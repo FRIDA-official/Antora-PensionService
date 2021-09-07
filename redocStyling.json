@@ -1,0 +1,21 @@
+{
+  "disableSearch": true,
+  "theme": {    
+    "sidebar":{
+      "width": "0px"
+    },
+    "rightPanel": {
+      "backgroundColor": "#ffffff",
+	    "textcolor": "#ffffff"
+    },
+    "colors":{
+      "tonalOffset":"3"
+    },
+    "typography":{
+      "fontFamily":"Roboto",
+      "headings":{
+        "fontFamily":"Roboto"
+    }
+    }
+  }
+}
