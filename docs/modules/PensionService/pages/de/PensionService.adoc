@@ -48,6 +48,7 @@ und +
 https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Mindeststandards/TLS-Protokoll/TLS-Protokoll_node.html +
 
 Entsprechend gelten folgende Mindeststandards für die Kommunikation: 
+
 * TLS > 1.2 in Kombination mit Perfect Forward Secrecy (PFS) 
  * Ältere TLS oder SSL Versionen dürfen nicht eingesetzt werden 
  * Die Nutzung von HTTPStrict Transport Security (HSTS) wird empfohlen 
