@@ -6,12 +6,16 @@
       "width": "0px"
     },
     "rightPanel": {
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "width": "45%"
+    },
+    "code":{
+      "fontSize":"14px"
     },
     "typography":{
-      "fontFamily":"Roboto",
+      "fontFamily":"Roboto,sans-serif",
       "headings":{
-        "fontFamily":"Roboto"
+        "fontFamily":"Roboto,sans-serif"
       }
     },
     "codeBlock":{
