@@ -5,8 +5,7 @@
       "width": "0px"
     },
     "rightPanel": {
-      "backgroundColor": "#ffffff",
-	    "textcolor": "#ffffff"
+      "backgroundColor": "#ffffff"
     },
     "colors":{
       "tonalOffset":"3"
@@ -15,7 +14,10 @@
       "fontFamily":"Roboto",
       "headings":{
         "fontFamily":"Roboto"
-    }
+      }
+    },
+    "codeSample":{
+      "backgroundColor":"#222"
     }
   }
 }
