@@ -1,5 +1,6 @@
 {
-  "disableSearch": true,
+  "expandResponses":true,
+  "expandSingleSchemaField":true,
   "theme": {    
     "sidebar":{
       "width": "0px"
@@ -7,16 +8,13 @@
     "rightPanel": {
       "backgroundColor": "#ffffff"
     },
-    "colors":{
-      "tonalOffset":"3"
-    },
     "typography":{
       "fontFamily":"Roboto",
       "headings":{
         "fontFamily":"Roboto"
       }
     },
-    "codeSample":{
+    "codeBlock":{
       "backgroundColor":"#222"
     }
   }
