@@ -27,9 +27,7 @@ jobs:
             git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git config --local user.name "github-actions[bot]"
             git commit -a -m "Add changes" --allow-empty
-        # Push Commits to the branch you are currently on and force the push 
-        - name: Pull changes
-          run: git pull origin master        
+        # Push Commits to the branch you are currently on and force the push   
         - name: Pushing changes to current Branch
           uses: ad-m/github-push-action@master          
           with:
@@ -40,6 +38,7 @@ jobs:
         - name: Workflow Dispatch
           uses: benc-uk/workflow-dispatch@v1
           with:
+            ref: ${{ github.event.pull_request.head.ref }}
             workflow: deploy documentation
             repo: FRIDA-official/Antora-FRIDA-Playbook
             token: ${{ secrets.G_ACCESS_TOKEN }}
