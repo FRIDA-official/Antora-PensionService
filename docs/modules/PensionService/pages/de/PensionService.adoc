@@ -1,6 +1,6 @@
 = FRIDA Pension
 
-DIES IST EIN PROOF OF CONCEPT FÜR DIE VERSIONSKONTROLLE
+DIES IST EIN PROOF OF CONCEPT FÜR DIE VERSIONSKONTROLLE 
 == Übersicht
 
 Der Frida PensionService ermöglicht es dem Kunden, eine Berechnung
