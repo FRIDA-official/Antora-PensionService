@@ -1,5 +1,5 @@
 = FRIDA Pension
-
+THIS IS A PROOF OF CONCEPT FOR THE VERSION CONTROL
 == Overview
 
 The Frida PensionService allows customers to perform a calculation of his pension for a specific contract. For this, the user has to configure his visible contracts which can be
