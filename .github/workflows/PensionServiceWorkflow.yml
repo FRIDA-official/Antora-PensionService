@@ -38,7 +38,7 @@ jobs:
         - name: Workflow Dispatch
           uses: benc-uk/workflow-dispatch@v1
           with:
-            ref: ${{ github.event.pull_request.head.ref }}
+            ref: refs/heads/master
             workflow: deploy documentation
             repo: FRIDA-official/Antora-FRIDA-Playbook
             token: ${{ secrets.G_ACCESS_TOKEN }}
