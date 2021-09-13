@@ -1,5 +1,6 @@
 name: component-pension
 title: Pension Service
+start_page:PensionService:de/PensionService.adoc
 version: '1.0'
 nav:
 - modules/PensionService/nav.adoc
