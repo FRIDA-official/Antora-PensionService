@@ -1,14 +1,5 @@
 = FRIDA Pension
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Test
-=======
-DIES IST EIN PROOF OF CONCEPT FÜR DIE VERSIONSKONTROLLE 
-
->>>>>>> 198b76269c41be393bad03797f96cc59570344ab
-=======
->>>>>>> d4cc616c71145fa2bbab36872fe77dd4abfd6a5d
 == Übersicht
 
 Der Frida PensionService ermöglicht es dem Kunden, eine Berechnung
